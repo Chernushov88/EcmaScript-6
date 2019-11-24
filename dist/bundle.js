@@ -73,43 +73,34 @@
 "use strict";
 
 
-// const original = function(){
-//     return 100;
-// }
-// console.log(original())
+var func = function func() {
+    var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 20;
+    var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : a + 50;
 
-// function original2(){
-//     return 200;
-// }
-// console.log(original2())
-
-// const arrow =(num,num2)=>{
-//     return 150 + num*num2;
-// }
-// console.log(arrow(50, 4))
-
-// const arrow2 = (num,num2) => 150 + num*num2;
-// console.log( arrow2(50, 5) )
-
-// const arrow3 = num => 150 + num;
-// console.log( arrow3(60) )
-
-var obj = {
-    name: "WFM",
-    logName: function logName() {
-        var _this = this;
-
-        // let self = this;
-        // setTimeout(function(){
-        //     console.log('Name: ',self.name);
-        // }, 2000)
-        setTimeout(function () {
-            return console.log('Name: ', _this.name);
-        }, 2000);
-    }
+    return a + b;
 };
 
-obj.logName();
+console.log(func(undefined, 80));
+console.log(func(80));
+console.log(func());
+
+var c = 90;
+var func2 = function func2() {
+    var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 20;
+    var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : a + c;
+    return a + b;
+};
+console.log(func2(30));
+
+var c2 = function c2() {
+    return 200;
+};
+var func3 = function func3() {
+    var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 20;
+    var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : a + c2();
+    return a + b;
+};
+console.log(func3(30));
 
 /***/ })
 /******/ ]);

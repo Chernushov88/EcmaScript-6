@@ -1,33 +1,15 @@
-// const original = function(){
-//     return 100;
-// }
-// console.log(original())
+const func = ( a = 20, b = a + 50 ) =>{
+    return a + b;
+};
 
-// function original2(){
-//     return 200;
-// }
-// console.log(original2())
+console.log(func(undefined,80));
+console.log(func(80));
+console.log(func());
 
-// const arrow =(num,num2)=>{
-//     return 150 + num*num2;
-// }
-// console.log(arrow(50, 4))
+const c = 90;
+const func2 = ( a = 20, b = a + c ) => a + b;
+console.log(func2(30));
 
-// const arrow2 = (num,num2) => 150 + num*num2;
-// console.log( arrow2(50, 5) )
-
-// const arrow3 = num => 150 + num;
-// console.log( arrow3(60) )
-
-const obj ={
-    name: "WFM",
-    logName: function(){
-        // let self = this;
-        // setTimeout(function(){
-        //     console.log('Name: ',self.name);
-        // }, 2000)
-        setTimeout( ()=> console.log('Name: ', this.name), 2000)
-    }
-}
-
-obj.logName();
+const c2 = () => 200;
+const func3 = ( a = 20, b = a + c2() ) => a + b;
+console.log( func3(30) );
