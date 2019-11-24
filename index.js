@@ -1,17 +1,13 @@
-// let obj = {
-//     name: "WFM 3",
-//     age: 40
-// }
-// let {name:n, age: a} = obj
-// console.log(n, a)
+function logStrings(num, ...args) {
+    // var args = Array.prototype.slice.call(arguments)
+    console.log(num, args)
+}
+logStrings(20, "WFM", "WFM2", "WFM3", "WFM4", "WFM5")
 
-// let array = ["WFM", 40, 'blue']
-// let name = array[0]
-// let age = array[1]
-// let color = array[2]
 
-// let [name, age, color] = array
-
-let array = ["WFM", 40]
-let [, , color='red'] = array
-console.log(color)
+function logStringsNew(num, ...args) {
+    console.log(num, args)
+}
+let spreadArray = ["WFM_spred", "WFM_spred2", "WFM_spred3", "WFM_spred4", "WFM_spred5"]
+logStringsNew(20, ...spreadArray)
+logStringsNew(20, "WFM_spred", "WFM_spred2", "WFM_spred3", "WFM_spred4", "WFM_spred5")

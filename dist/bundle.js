@@ -73,25 +73,26 @@
 "use strict";
 
 
-// let obj = {
-//     name: "WFM 3",
-//     age: 40
-// }
-// let {name:n, age: a} = obj
-// console.log(n, a)
+function logStrings(num) {
+    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+        args[_key - 1] = arguments[_key];
+    }
 
-// let array = ["WFM", 40, 'blue']
-// let name = array[0]
-// let age = array[1]
-// let color = array[2]
+    // var args = Array.prototype.slice.call(arguments)
+    console.log(num, args);
+}
+logStrings(20, "WFM", "WFM2", "WFM3", "WFM4", "WFM5");
 
-// let [name, age, color] = array
+function logStringsNew(num) {
+    for (var _len2 = arguments.length, args = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+        args[_key2 - 1] = arguments[_key2];
+    }
 
-var array = ["WFM", 40];
-var _array$ = array[2],
-    color = _array$ === undefined ? 'red' : _array$;
-
-console.log(color);
+    console.log(num, args);
+}
+var spreadArray = ["WFM_spred", "WFM_spred2", "WFM_spred3", "WFM_spred4", "WFM_spred5"];
+logStringsNew.apply(undefined, [20].concat(spreadArray));
+logStringsNew(20, "WFM_spred", "WFM_spred2", "WFM_spred3", "WFM_spred4", "WFM_spred5");
 
 /***/ })
 /******/ ]);
