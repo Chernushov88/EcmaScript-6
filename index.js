@@ -1,28 +1,17 @@
-// const name = "WFM"
-// const age = 40
-// const obj = {name, age}
-// console.log(obj)
-
-// const createPerson = (name, surname) => {
-//     const fullname = name + ' ' + surname;
-//     return {fullname, name, surname}
+// let obj = {
+//     name: "WFM 3",
+//     age: 40
 // }
-// console.log(createPerson('WFM', 'WFM2'))
+// let {name:n, age: a} = obj
+// console.log(n, a)
 
-const createPerson = (name, surname, fieldName) => {
-    const fullname = name + ' ' + surname;
-    return {
-        fullname: fullname,
-        name: name,
-        surname: surname,
-        getJob: function getJob() {
-            return 'Front end-1';
-        },
-        [fieldName + fieldPostfix]: 150
-    };
-    // let finalFieldName = fieldName + fieldPostfix
-    // persone[finalFieldName] = 50;
-    // return persone;
-}
-const person = createPerson('WFM', 'WFM2', 'age');
-console.log(person)
+// let array = ["WFM", 40, 'blue']
+// let name = array[0]
+// let age = array[1]
+// let color = array[2]
+
+// let [name, age, color] = array
+
+let array = ["WFM", 40]
+let [, , color='red'] = array
+console.log(color)

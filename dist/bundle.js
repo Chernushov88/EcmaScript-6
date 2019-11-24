@@ -73,35 +73,25 @@
 "use strict";
 
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-// const name = "WFM"
-// const age = 40
-// const obj = {name, age}
-// console.log(obj)
-
-// const createPerson = (name, surname) => {
-//     const fullname = name + ' ' + surname;
-//     return {fullname, name, surname}
+// let obj = {
+//     name: "WFM 3",
+//     age: 40
 // }
-// console.log(createPerson('WFM', 'WFM2'))
+// let {name:n, age: a} = obj
+// console.log(n, a)
 
-var createPerson = function createPerson(name, surname, fieldName) {
-    var fullname = name + ' ' + surname;
-    return _defineProperty({
-        fullname: fullname,
-        name: name,
-        surname: surname,
-        getJob: function getJob() {
-            return 'Front end-1';
-        }
-    }, fieldName + fieldPostfix, 150);
-    // let finalFieldName = fieldName + fieldPostfix
-    // persone[finalFieldName] = 50;
-    // return persone;
-};
-var person = createPerson('WFM', 'WFM2', 'age');
-console.log(person);
+// let array = ["WFM", 40, 'blue']
+// let name = array[0]
+// let age = array[1]
+// let color = array[2]
+
+// let [name, age, color] = array
+
+var array = ["WFM", 40];
+var _array$ = array[2],
+    color = _array$ === undefined ? 'red' : _array$;
+
+console.log(color);
 
 /***/ })
 /******/ ]);
