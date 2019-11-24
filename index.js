@@ -1,23 +1,33 @@
-/*
-const my_const = 1;
-my_const = 2;
- */
-for (var a=0; a<10; a++){
-    setTimeout(function() {
-        a = a-1;
-        console.log(a);
-    }, 1000)
-}
-const arr = [10, 12, 15, 21];
-for (var i = 0; i < arr.length; i++) {
-    setTimeout(function() {
-        i = i-1;
-        console.log('Index: ' + i + ', element: ' + arr[i]);
-    }, 3000);
+// const original = function(){
+//     return 100;
+// }
+// console.log(original())
+
+// function original2(){
+//     return 200;
+// }
+// console.log(original2())
+
+// const arrow =(num,num2)=>{
+//     return 150 + num*num2;
+// }
+// console.log(arrow(50, 4))
+
+// const arrow2 = (num,num2) => 150 + num*num2;
+// console.log( arrow2(50, 5) )
+
+// const arrow3 = num => 150 + num;
+// console.log( arrow3(60) )
+
+const obj ={
+    name: "WFM",
+    logName: function(){
+        // let self = this;
+        // setTimeout(function(){
+        //     console.log('Name: ',self.name);
+        // }, 2000)
+        setTimeout( ()=> console.log('Name: ', this.name), 2000)
+    }
 }
 
-for (let j=0; j<10; j++){
-    setTimeout(function() {
-        console.log(j);
-    }, 3000)
-}
+obj.logName();
