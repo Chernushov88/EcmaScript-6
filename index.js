@@ -1,15 +1,28 @@
-const func = ( a = 20, b = a + 50 ) =>{
-    return a + b;
-};
+// const name = "WFM"
+// const age = 40
+// const obj = {name, age}
+// console.log(obj)
 
-console.log(func(undefined,80));
-console.log(func(80));
-console.log(func());
+// const createPerson = (name, surname) => {
+//     const fullname = name + ' ' + surname;
+//     return {fullname, name, surname}
+// }
+// console.log(createPerson('WFM', 'WFM2'))
 
-const c = 90;
-const func2 = ( a = 20, b = a + c ) => a + b;
-console.log(func2(30));
-
-const c2 = () => 200;
-const func3 = ( a = 20, b = a + c2() ) => a + b;
-console.log( func3(30) );
+const createPerson = (name, surname, fieldName) => {
+    const fullname = name + ' ' + surname;
+    return {
+        fullname: fullname,
+        name: name,
+        surname: surname,
+        getJob: function getJob() {
+            return 'Front end-1';
+        },
+        [fieldName + fieldPostfix]: 150
+    };
+    // let finalFieldName = fieldName + fieldPostfix
+    // persone[finalFieldName] = 50;
+    // return persone;
+}
+const person = createPerson('WFM', 'WFM2', 'age');
+console.log(person)

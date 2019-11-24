@@ -73,34 +73,35 @@
 "use strict";
 
 
-var func = function func() {
-    var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 20;
-    var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : a + 50;
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-    return a + b;
-};
+// const name = "WFM"
+// const age = 40
+// const obj = {name, age}
+// console.log(obj)
 
-console.log(func(undefined, 80));
-console.log(func(80));
-console.log(func());
+// const createPerson = (name, surname) => {
+//     const fullname = name + ' ' + surname;
+//     return {fullname, name, surname}
+// }
+// console.log(createPerson('WFM', 'WFM2'))
 
-var c = 90;
-var func2 = function func2() {
-    var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 20;
-    var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : a + c;
-    return a + b;
+var createPerson = function createPerson(name, surname, fieldName) {
+    var fullname = name + ' ' + surname;
+    return _defineProperty({
+        fullname: fullname,
+        name: name,
+        surname: surname,
+        getJob: function getJob() {
+            return 'Front end-1';
+        }
+    }, fieldName + fieldPostfix, 150);
+    // let finalFieldName = fieldName + fieldPostfix
+    // persone[finalFieldName] = 50;
+    // return persone;
 };
-console.log(func2(30));
-
-var c2 = function c2() {
-    return 200;
-};
-var func3 = function func3() {
-    var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 20;
-    var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : a + c2();
-    return a + b;
-};
-console.log(func3(30));
+var person = createPerson('WFM', 'WFM2', 'age');
+console.log(person);
 
 /***/ })
 /******/ ]);
