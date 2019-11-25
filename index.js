@@ -1,36 +1,42 @@
-/*
-let set = new Set();
-set.add(10);
-set.add('Hello');
-set.add({});
-set.add(10);
-console.log(set.size)
-console.log(set)
-let set = new Set([1,2,3,3,4,4,5,3]);
-console.log(set.size)
+/*let map = new Map();
+
+map.set('name', "WFM");
+map.set('age', 20);
+
+let obj1 = {}
+let obj2 = {}
+
+map.set(obj1, 11)
+map.set(obj2, 50)
+
+console.log('size', map.size);
+console.log('Has', map.has(obj2));
+console.log('delete', map.delete(obj2));
+console.log('Has', map.has(obj2));
+console.log('size', map.size);
 */
 
-/*
-let set = new Set().add(2).add(3).add(4).add(5)
-console.log('set size ', set.size)
-console.log('set has ', set.has(3))
-console.log('set delete ', set.delete(3))
-console.log('set size ', set.size)
-console.log('set has ', set.has(3))
-console.log('set clear ', set.clear())
-console.log('set size ', set.size)
- */
+let map = new Map([
+    ['name', "WFM"],
+    ['age', 20]
+]);
+// console.log(map)
 
-/*let set = new Set()
-let key = {}
-set.add(key)
-console.log(set.size)
-key = null;
-console.log(set.size)*/
+for (let val of map.values()){
+    console.log('values: ', val)
+}
 
-let set = new WeakSet()
+for (let key of map.keys()){
+    console.log('keys: ', key)
+}
+
+for (let entr of map.entries()){
+    console.log(`${entr[0]} - ${entr[1]}`)
+}
+
+let map2 = new WeakMap();
 let key = {}
-set.add(key)
-console.log(set.size)
-key = null;
-console.log(set.size)
+map2.set(key, 'key')
+console.log('size: ', map2.size)
+key = null
+console.log('size: ', map2.size)
