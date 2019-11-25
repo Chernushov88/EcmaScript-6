@@ -1,13 +1,15 @@
-function logStrings(num, ...args) {
-    // var args = Array.prototype.slice.call(arguments)
-    console.log(num, args)
-}
-logStrings(20, "WFM", "WFM2", "WFM3", "WFM4", "WFM5")
+let name = 'WFM';
 
+//let str = 'Hello ' + name + ', glad to \'see\' you!';
+//let str = `Hello ${name}, glad to "see" you! ${5 + 10}`;
 
-function logStringsNew(num, ...args) {
-    console.log(num, args)
-}
-let spreadArray = ["WFM_spred", "WFM_spred2", "WFM_spred3", "WFM_spred4", "WFM_spred5"]
-logStringsNew(20, ...spreadArray)
-logStringsNew(20, "WFM_spred", "WFM_spred2", "WFM_spred3", "WFM_spred4", "WFM_spred5")
+let html = `
+    <div>
+        <h1>${name}</h1>
+        <span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, tempore.</p>
+        </span>
+    </div>
+`;
+
+console.log(html);

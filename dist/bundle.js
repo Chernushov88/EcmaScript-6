@@ -73,26 +73,14 @@
 "use strict";
 
 
-function logStrings(num) {
-    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-        args[_key - 1] = arguments[_key];
-    }
+var name = 'WFM';
 
-    // var args = Array.prototype.slice.call(arguments)
-    console.log(num, args);
-}
-logStrings(20, "WFM", "WFM2", "WFM3", "WFM4", "WFM5");
+//let str = 'Hello ' + name + ', glad to \'see\' you!';
+//let str = `Hello ${name}, glad to "see" you! ${5 + 10}`;
 
-function logStringsNew(num) {
-    for (var _len2 = arguments.length, args = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
-        args[_key2 - 1] = arguments[_key2];
-    }
+var html = '\n    <div>\n        <h1>' + name + '</h1>\n        <span>\n            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, tempore.</p>\n        </span>\n    </div>\n';
 
-    console.log(num, args);
-}
-var spreadArray = ["WFM_spred", "WFM_spred2", "WFM_spred3", "WFM_spred4", "WFM_spred5"];
-logStringsNew.apply(undefined, [20].concat(spreadArray));
-logStringsNew(20, "WFM_spred", "WFM_spred2", "WFM_spred3", "WFM_spred4", "WFM_spred5");
+console.log(html);
 
 /***/ })
 /******/ ]);
