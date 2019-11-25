@@ -1,15 +1,20 @@
-let name = 'WFM';
+const array = [1,2,3,4,5,6];
 
-//let str = 'Hello ' + name + ', glad to \'see\' you!';
-//let str = `Hello ${name}, glad to "see" you! ${5 + 10}`;
+for (let i = 0; i < array.length; i++){
+    console.log(array[i])
+}
+console.log('-------------------')
 
-let html = `
-    <div>
-        <h1>${name}</h1>
-        <span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, tempore.</p>
-        </span>
-    </div>
-`;
+array.forEach(function(item){
+    console.log(item)
+})
+console.log('-------------------')
 
-console.log(html);
+for (let item of array){
+    console.log('item ', item)
+}
+console.log('-------------------')
+
+for (let item of 'ABCDEFG'){
+    console.log('item ', item)
+}
