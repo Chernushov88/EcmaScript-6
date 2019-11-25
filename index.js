@@ -1,20 +1,51 @@
-const array = [1,2,3,4,5,6];
-
-for (let i = 0; i < array.length; i++){
-    console.log(array[i])
+// function Car(name) {
+//     this.name = name
+// }
+//
+// Car.prototype.logName = function () {
+//     console.log(this.name)
+// }
+//
+// let car = new Car('Audi')
+// car.logName();
+/*
+class Car {
+    constructor (name){
+        this.name = name
+    }
+    logName(){
+        console.log(this.name)
+    }
+    static staticFunc() {
+        console.log('I am static!')
+    }
 }
-console.log('-------------------')
-
-array.forEach(function(item){
-    console.log(item)
-})
-console.log('-------------------')
-
-for (let item of array){
-    console.log('item ', item)
+let car = new Car('BMW')
+// car.logName()
+console.log(car.logName() === Car.prototype.logName())
+Car.staticFunc()
+*/
+class Car {
+    constructor (name){
+        console.log('Car constructor')
+        this.name = name
+    }
+    logName(){
+        console.log('Car name is: ', this.name)
+    }
 }
-console.log('-------------------')
+let car = new Car('Mersedes')
+car.logName()
 
-for (let item of 'ABCDEFG'){
-    console.log('item ', item)
+class BMW extends Car{
+    constructor(name){
+        super(name);
+        console.log('BMW constructor')
+    }
+    logName(){
+        super.logName()
+        // console.log('BMW name is: ', this.name)
+    }
 }
+let bmw = new BMW('x6')
+bmw.logName()
