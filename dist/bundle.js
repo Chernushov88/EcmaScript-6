@@ -73,53 +73,94 @@
 "use strict";
 
 
-var _extra = __webpack_require__(1);
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var _extra2 = _interopRequireDefault(_extra);
+/*let s = Symbol('WFM')
+let s2 = Symbol('1');
+let s3 = Symbol('1');
+console.log(s2 === s3)*/
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+/*let s = Symbol('field')
+let s1 = Symbol('field')
 
-var car = new _extra2.default(); // import {name, age} from './extra'
-// console.log(age, name)
+let obj = {
+    age: 20,
+    [s]: 'WFM'
+}
+console.log(Object.getOwnPropertyNames(obj))
+console.log(Object.getOwnPropertySymbols(obj))*/
 
-// import {name as n, age as a} from './extra'
-// console.log(a, n)
+/*let num = 1
+let str = '2'
+let arr = [1,2,3,4,5]
+let obj = {
+    name: 'WFM',
+    age: 20
+}
 
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
+console.log('Number: ', typeof num[Symbol.iterator])
+console.log('String: ', typeof str[Symbol.iterator])
+console.log('Array: ', typeof arr[Symbol.iterator])
+console.log('Object: ', typeof obj[Symbol.iterator])*/
 
-"use strict";
+/*function createIterator(arr) {
+    let count = 0
+    return {
+        next() {
+            return count < arr.length
+                ? {value: arr[count++], done: false}
+                : {value: undefined, done: true}
+        }
+    }
+}
+let item = createIterator([1,2,3,4])
+console.log(item.next())
+console.log(item.next())
+console.log(item.next())
+console.log(item.next())
+console.log(item.next())
+console.log(item.next())
+*/
 
+var fib = _defineProperty({}, Symbol.iterator, function () {
+    var pre = 0,
+        cur = 1;
+    return {
+        next: function next() {
+            var _ref = [cur, pre + cur];
+            pre = _ref[0];
+            cur = _ref[1];
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
+            return { value: cur, done: false };
+        }
+    };
 });
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var _iteratorNormalCompletion = true;
+var _didIteratorError = false;
+var _iteratorError = undefined;
 
-// export let name = "WFM"
-// export let age = 20
+try {
+    for (var _iterator = fib[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+        var n = _step.value;
 
-// let name = "WFM"
-// let age = 20
-// export {name, age}
-
-// export function func() {
-//     console.log('I am func()')
-// }
-
-// export default function func() {
-//     console.log('I am func()')
-// }
-
-var Car = function Car() {
-    _classCallCheck(this, Car);
-
-    console.log('I am class Car');
-};
-
-exports.default = Car;
+        if (n > 1500000) break;
+        console.log(n);
+    }
+} catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+} finally {
+    try {
+        if (!_iteratorNormalCompletion && _iterator.return) {
+            _iterator.return();
+        }
+    } finally {
+        if (_didIteratorError) {
+            throw _iteratorError;
+        }
+    }
+}
 
 /***/ })
 /******/ ]);
