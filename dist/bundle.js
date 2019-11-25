@@ -73,89 +73,42 @@
 "use strict";
 
 
-var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-// function Car(name) {
-//     this.name = name
-// }
-//
-// Car.prototype.logName = function () {
-//     console.log(this.name)
-// }
-//
-// let car = new Car('Audi')
-// car.logName();
 /*
-class Car {
-    constructor (name){
-        this.name = name
-    }
-    logName(){
-        console.log(this.name)
-    }
-    static staticFunc() {
-        console.log('I am static!')
-    }
-}
-let car = new Car('BMW')
-// car.logName()
-console.log(car.logName() === Car.prototype.logName())
-Car.staticFunc()
+let set = new Set();
+set.add(10);
+set.add('Hello');
+set.add({});
+set.add(10);
+console.log(set.size)
+console.log(set)
+let set = new Set([1,2,3,3,4,4,5,3]);
+console.log(set.size)
 */
-var Car = function () {
-    function Car(name) {
-        _classCallCheck(this, Car);
 
-        console.log('Car constructor');
-        this.name = name;
-    }
+/*
+let set = new Set().add(2).add(3).add(4).add(5)
+console.log('set size ', set.size)
+console.log('set has ', set.has(3))
+console.log('set delete ', set.delete(3))
+console.log('set size ', set.size)
+console.log('set has ', set.has(3))
+console.log('set clear ', set.clear())
+console.log('set size ', set.size)
+ */
 
-    _createClass(Car, [{
-        key: 'logName',
-        value: function logName() {
-            console.log('Car name is: ', this.name);
-        }
-    }]);
+/*let set = new Set()
+let key = {}
+set.add(key)
+console.log(set.size)
+key = null;
+console.log(set.size)*/
 
-    return Car;
-}();
-
-var car = new Car('Mersedes');
-car.logName();
-
-var BMW = function (_Car) {
-    _inherits(BMW, _Car);
-
-    function BMW(name) {
-        _classCallCheck(this, BMW);
-
-        var _this = _possibleConstructorReturn(this, (BMW.__proto__ || Object.getPrototypeOf(BMW)).call(this, name));
-
-        console.log('BMW constructor');
-        return _this;
-    }
-
-    _createClass(BMW, [{
-        key: 'logName',
-        value: function logName() {
-            _get(BMW.prototype.__proto__ || Object.getPrototypeOf(BMW.prototype), 'logName', this).call(this);
-            // console.log('BMW name is: ', this.name)
-        }
-    }]);
-
-    return BMW;
-}(Car);
-
-var bmw = new BMW('x6');
-bmw.logName();
+var set = new WeakSet();
+var key = {};
+set.add(key);
+console.log(set.size);
+key = null;
+console.log(set.size);
 
 /***/ })
 /******/ ]);

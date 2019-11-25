@@ -1,51 +1,36 @@
-// function Car(name) {
-//     this.name = name
-// }
-//
-// Car.prototype.logName = function () {
-//     console.log(this.name)
-// }
-//
-// let car = new Car('Audi')
-// car.logName();
 /*
-class Car {
-    constructor (name){
-        this.name = name
-    }
-    logName(){
-        console.log(this.name)
-    }
-    static staticFunc() {
-        console.log('I am static!')
-    }
-}
-let car = new Car('BMW')
-// car.logName()
-console.log(car.logName() === Car.prototype.logName())
-Car.staticFunc()
+let set = new Set();
+set.add(10);
+set.add('Hello');
+set.add({});
+set.add(10);
+console.log(set.size)
+console.log(set)
+let set = new Set([1,2,3,3,4,4,5,3]);
+console.log(set.size)
 */
-class Car {
-    constructor (name){
-        console.log('Car constructor')
-        this.name = name
-    }
-    logName(){
-        console.log('Car name is: ', this.name)
-    }
-}
-let car = new Car('Mersedes')
-car.logName()
 
-class BMW extends Car{
-    constructor(name){
-        super(name);
-        console.log('BMW constructor')
-    }
-    logName(){
-        super.logName()
-        // console.log('BMW name is: ', this.name)
-    }
-}
-let bmw = new BMW('x6')
-bmw.logName()
+/*
+let set = new Set().add(2).add(3).add(4).add(5)
+console.log('set size ', set.size)
+console.log('set has ', set.has(3))
+console.log('set delete ', set.delete(3))
+console.log('set size ', set.size)
+console.log('set has ', set.has(3))
+console.log('set clear ', set.clear())
+console.log('set size ', set.size)
+ */
+
+/*let set = new Set()
+let key = {}
+set.add(key)
+console.log(set.size)
+key = null;
+console.log(set.size)*/
+
+let set = new WeakSet()
+let key = {}
+set.add(key)
+console.log(set.size)
+key = null;
+console.log(set.size)
