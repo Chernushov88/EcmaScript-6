@@ -73,108 +73,53 @@
 "use strict";
 
 
-/*let map = new Map();
+var _extra = __webpack_require__(1);
 
-map.set('name', "WFM");
-map.set('age', 20);
+var _extra2 = _interopRequireDefault(_extra);
 
-let obj1 = {}
-let obj2 = {}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-map.set(obj1, 11)
-map.set(obj2, 50)
+var car = new _extra2.default(); // import {name, age} from './extra'
+// console.log(age, name)
 
-console.log('size', map.size);
-console.log('Has', map.has(obj2));
-console.log('delete', map.delete(obj2));
-console.log('Has', map.has(obj2));
-console.log('size', map.size);
-*/
+// import {name as n, age as a} from './extra'
+// console.log(a, n)
 
-var map = new Map([['name', "WFM"], ['age', 20]]);
-// console.log(map)
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
 
-var _iteratorNormalCompletion = true;
-var _didIteratorError = false;
-var _iteratorError = undefined;
+"use strict";
 
-try {
-    for (var _iterator = map.values()[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-        var val = _step.value;
 
-        console.log('values: ', val);
-    }
-} catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
-} finally {
-    try {
-        if (!_iteratorNormalCompletion && _iterator.return) {
-            _iterator.return();
-        }
-    } finally {
-        if (_didIteratorError) {
-            throw _iteratorError;
-        }
-    }
-}
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 
-var _iteratorNormalCompletion2 = true;
-var _didIteratorError2 = false;
-var _iteratorError2 = undefined;
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-try {
-    for (var _iterator2 = map.keys()[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-        var _key = _step2.value;
+// export let name = "WFM"
+// export let age = 20
 
-        console.log('keys: ', _key);
-    }
-} catch (err) {
-    _didIteratorError2 = true;
-    _iteratorError2 = err;
-} finally {
-    try {
-        if (!_iteratorNormalCompletion2 && _iterator2.return) {
-            _iterator2.return();
-        }
-    } finally {
-        if (_didIteratorError2) {
-            throw _iteratorError2;
-        }
-    }
-}
+// let name = "WFM"
+// let age = 20
+// export {name, age}
 
-var _iteratorNormalCompletion3 = true;
-var _didIteratorError3 = false;
-var _iteratorError3 = undefined;
+// export function func() {
+//     console.log('I am func()')
+// }
 
-try {
-    for (var _iterator3 = map.entries()[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-        var entr = _step3.value;
+// export default function func() {
+//     console.log('I am func()')
+// }
 
-        console.log(entr[0] + ' - ' + entr[1]);
-    }
-} catch (err) {
-    _didIteratorError3 = true;
-    _iteratorError3 = err;
-} finally {
-    try {
-        if (!_iteratorNormalCompletion3 && _iterator3.return) {
-            _iterator3.return();
-        }
-    } finally {
-        if (_didIteratorError3) {
-            throw _iteratorError3;
-        }
-    }
-}
+var Car = function Car() {
+    _classCallCheck(this, Car);
 
-var map2 = new WeakMap();
-var key = {};
-map2.set(key, 'key');
-console.log('size: ', map2.size);
-key = null;
-console.log('size: ', map2.size);
+    console.log('I am class Car');
+};
+
+exports.default = Car;
 
 /***/ })
 /******/ ]);
