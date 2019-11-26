@@ -1,64 +1,62 @@
-/*let s = Symbol('WFM')
-let s2 = Symbol('1');
-let s3 = Symbol('1');
-console.log(s2 === s3)*/
-
-/*let s = Symbol('field')
-let s1 = Symbol('field')
-
-let obj = {
-    age: 20,
-    [s]: 'WFM'
+/*function* gen() {
+    yield 11
+    yield 22
+    yield 33
 }
-console.log(Object.getOwnPropertyNames(obj))
-console.log(Object.getOwnPropertySymbols(obj))*/
+let iter = gen();
+console.log(iter.next())
+console.log(iter.next())
+console.log(iter.next())
+console.log(iter.next())*/
 
-/*let num = 1
-let str = '2'
-let arr = [1,2,3,4,5]
-let obj = {
-    name: 'WFM',
-    age: 20
+/*function* g1() {
+    yield 1
+    yield* g2()
+    yield 4
 }
+function* g2() {
+    yield 2
+    yield 3
+}
+let iter = g1()
+console.log(iter.next())
+console.log(iter.next())
+console.log(iter.next())
+console.log(iter.next())
+console.log(iter.next())*/
 
-console.log('Number: ', typeof num[Symbol.iterator])
-console.log('String: ', typeof str[Symbol.iterator])
-console.log('Array: ', typeof arr[Symbol.iterator])
-console.log('Object: ', typeof obj[Symbol.iterator])*/
+/*function* g() {
+    yield* [1,2,3,4,5]
+}
+let iter = g()
+console.log(iter.next())
+console.log(iter.next())
+console.log(iter.next())
+console.log(iter.next())
+console.log(iter.next())*/
 
-/*function createIterator(arr) {
-    let count = 0
-    return {
-        next() {
-            return count < arr.length
-                ? {value: arr[count++], done: false}
-                : {value: undefined, done: true}
-        }
+/*function* getRange(start = 0, end = 100, step = 10) {
+    while (start < end) {
+        yield start
+        start += step
     }
 }
-let item = createIterator([1,2,3,4])
-console.log(item.next())
-console.log(item.next())
-console.log(item.next())
-console.log(item.next())
-console.log(item.next())
-console.log(item.next())
-*/
-
+for (let n of getRange(10, 50, 5)){
+    console.log(n)
+}*/
 
 let fib = {
-    [Symbol.iterator]() {
-        let pre = 0, cur = 1;
-        return {
-            next() {
-                [pre, cur] = [cur, pre + cur];
-                return {value: cur, done: false};
-            }
+    *[Symbol.iterator]() {
+        let cur = 1, pre = 0;
+        for (;;) {
+            [cur, pre] = [cur + pre, cur];
+            yield cur;
         }
     }
 };
 
+
 for (let n of fib) {
-    if (n > 1500000) break;
+    if (n > 3000) break;
     console.log(n);
 }
