@@ -1,62 +1,23 @@
-/*function* gen() {
-    yield 11
-    yield 22
-    yield 33
-}
-let iter = gen();
-console.log(iter.next())
-console.log(iter.next())
-console.log(iter.next())
-console.log(iter.next())*/
+let obj1 = {a: 1}
+let obj2 = {b: 2, c: 3}
+let obj3 = Object.assign({d: 4}, obj1, obj2)
+let obj4 = {a: 1}
+let obj5 = {b: 2, c: 3}
+Object.assign(obj4, obj5)
 
-/*function* g1() {
-    yield 1
-    yield* g2()
-    yield 4
-}
-function* g2() {
-    yield 2
-    yield 3
-}
-let iter = g1()
-console.log(iter.next())
-console.log(iter.next())
-console.log(iter.next())
-console.log(iter.next())
-console.log(iter.next())*/
-
-/*function* g() {
-    yield* [1,2,3,4,5]
-}
-let iter = g()
-console.log(iter.next())
-console.log(iter.next())
-console.log(iter.next())
-console.log(iter.next())
-console.log(iter.next())*/
-
-/*function* getRange(start = 0, end = 100, step = 10) {
-    while (start < end) {
-        yield start
-        start += step
-    }
-}
-for (let n of getRange(10, 50, 5)){
-    console.log(n)
-}*/
-
-let fib = {
-    *[Symbol.iterator]() {
-        let cur = 1, pre = 0;
-        for (;;) {
-            [cur, pre] = [cur + pre, cur];
-            yield cur;
-        }
-    }
-};
+console.log('Oobj1', obj1)
+console.log('Oobj2', obj2)
+console.log('Oobj3', obj3)
+console.log('Oobj4', obj4)
+console.log('Oobj5', obj5)
 
 
-for (let n of fib) {
-    if (n > 3000) break;
-    console.log(n);
-}
+
+let findedItem = [1,2,3,4].find(x => x > 3)
+console.log(findedItem)
+
+let str = 'Hello!'
+
+console.log('Repeat: ', str.repeat(3))
+console.log('startsWith: ', str.startsWith('ell', 1))
+console.log('includes: ', str.includes('llo', 2))
