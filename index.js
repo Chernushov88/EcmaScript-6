@@ -1,23 +1,53 @@
-let obj1 = {a: 1}
-let obj2 = {b: 2, c: 3}
-let obj3 = Object.assign({d: 4}, obj1, obj2)
-let obj4 = {a: 1}
-let obj5 = {b: 2, c: 3}
-Object.assign(obj4, obj5)
+// http://date.jsontest.com/
 
-console.log('Oobj1', obj1)
-console.log('Oobj2', obj2)
-console.log('Oobj3', obj3)
-console.log('Oobj4', obj4)
-console.log('Oobj5', obj5)
+/*function oldDelay(ms, func) {
+    setTimeout(function() {
+        func()
+    }, ms)
+}
 
+oldDelay(3000, function(){
+    console.log('Old delay passed!')
+})*/
 
+/*function deley(ms = 1000) {
+    return new Promise((resolve, reject) => [
+        setTimeout( () =>{
+            reject()
+        }, ms)
+    ])
+}
+deley(2000)
+    .then(() => {
+        console.log('new deley passed!')
+    })
+    .catch(() => {
+        console.info('error')
+    })
+    .then(() => {
+        console.log('new deley test!')
+    })*/
+import $ from 'jquery'
+let promise = new Promise((resolve, reject) => {
+    $.ajax({
+        url: 'http://d1ate.jsontest.com/',
+        dataType: 'json',
+        success: function(response){
+            resolve(response)
+        },
+        error: function(error){
+            reject(error)
+        }
+    })
+})
 
-let findedItem = [1,2,3,4].find(x => x > 3)
-console.log(findedItem)
-
-let str = 'Hello!'
-
-console.log('Repeat: ', str.repeat(3))
-console.log('startsWith: ', str.startsWith('ell', 1))
-console.log('includes: ', str.includes('llo', 2))
+promise
+    .then((data) => {
+        return data.date
+    })
+    .then((date) => {
+        console.log('Date', date)
+    })
+    .catch((error) =>{
+        console.info(error)
+    })
