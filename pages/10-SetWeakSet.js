@@ -1,3 +1,4 @@
+document.title = "10-SetWeakSet";
 /*
 let set = new Set();
 set.add(10);
@@ -28,3 +29,11 @@ console.log(set)
 console.log(set.size)
 key = null;
 console.log(set.size)
+
+/*
+let node = document.querySelector('#node');
+let setNode = new Set().add(node);
+console.log(setNode.size)
+console.log(setNode.has(node))
+console.log('setNode', setNode)
+*/

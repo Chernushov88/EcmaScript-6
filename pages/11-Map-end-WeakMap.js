@@ -1,4 +1,6 @@
-/*let map = new Map();
+document.title = "11-Map-end-WeakMap";
+/*
+let map = new Map();
 
 map.set('name', "WFM");
 map.set('age', 20);
@@ -8,13 +10,14 @@ let obj2 = {}
 
 map.set(obj1, 11)
 map.set(obj2, 50)
-
+console.log('size', map);
 console.log('size', map.size);
 console.log('Has', map.has(obj2));
 console.log('delete', map.delete(obj2));
 console.log('Has', map.has(obj2));
 console.log('size', map.size);
 */
+
 
 let map = new Map([
     ['name', "WFM"],
@@ -35,8 +38,12 @@ for (let entr of map.entries()){
 }
 
 let map2 = new WeakMap();
-let key = {}
-map2.set('key', key)
+//let key = {}
+let key = {name2: "test"}
+
+// map2.set('key', key)
+map2.set(key, "key")
 console.log('size: ', map2.size)
-key = null
+// key = null
 console.log('size: ', map2.size)
+

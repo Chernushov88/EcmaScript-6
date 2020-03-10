@@ -1,53 +1,21 @@
-// http://date.jsontest.com/
+const array = [1,2,3,4,5,6];
 
-/*function oldDelay(ms, func) {
-    setTimeout(function() {
-        func()
-    }, ms)
+for (let i = 0; i < array.length; i++){
+    console.log(array[i])
 }
+console.log('-------------------')
 
-oldDelay(3000, function(){
-    console.log('Old delay passed!')
-})*/
-
-/*function deley(ms = 1000) {
-    return new Promise((resolve, reject) => [
-        setTimeout( () =>{
-            reject()
-        }, ms)
-    ])
-}
-deley(2000)
-    .then(() => {
-        console.log('new deley passed!')
-    })
-    .catch(() => {
-        console.info('error')
-    })
-    .then(() => {
-        console.log('new deley test!')
-    })*/
-import $ from 'jquery'
-let promise = new Promise((resolve, reject) => {
-    $.ajax({
-        url: 'http://d1ate.jsontest.com/',
-        dataType: 'json',
-        success: function(response){
-            resolve(response)
-        },
-        error: function(error){
-            reject(error)
-        }
-    })
+array.forEach(function(item){
+    console.log(item)
 })
+console.log('-------------------')
 
-promise
-    .then((data) => {
-        return data.date
-    })
-    .then((date) => {
-        console.log('Date', date)
-    })
-    .catch((error) =>{
-        console.info(error)
-    })
+for (let item of array){
+    console.log('item ', item)
+}
+console.log('-------------------')
+
+for (let item of "ABCD"){
+    console.log('item ', item)
+}
+console.log('-------------------')

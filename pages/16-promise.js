@@ -30,7 +30,7 @@ deley(2000)
 import $ from 'jquery'
 let promise = new Promise((resolve, reject) => {
     $.ajax({
-        url: 'http://d1ate.jsontest.com/',
+        url: 'http://date.jsontest.com/',
         dataType: 'json',
         success: function(response){
             resolve(response)
@@ -43,6 +43,7 @@ let promise = new Promise((resolve, reject) => {
 
 promise
     .then((data) => {
+        console.log('success - ', data)
         return data.date
     })
     .then((date) => {

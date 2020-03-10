@@ -1,3 +1,4 @@
+document.title = '3-paramets_default';
 const func = ( a = 20, b = a + 50 ) =>{
     return a + b;
 };
