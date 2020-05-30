@@ -9,19 +9,20 @@ logStrings(20, "WFM", "WFM2", "WFM3", "WFM4", "WFM5")
 function logStringsNew(num, ...args) {
     console.log(num, args)
 }
-let spreadArray = ["WFM", "WFM2", "WFM3", "WFM4", "WFM5"]
+
+let spreadArray = ["WFM-", "WFM-2", "WFM-3", "WFM-4", "WFM-5"]
 logStringsNew(20, ...spreadArray)
 
 function foo(...args) {
     return arguments;
 }
-console.log(foo(1, 2, 3)); // { "0": 1, "1": 2, "2": 3 }
+console.log(foo(1, 2, 3,4,5,6,7)); // { "0": 1, "1": 2, "2": 3 }
 
-function sum0(x, y, z) {
-    console.log(x, y, z)
-    return x + y + z;
+function sum0(x, y, z,a,b,c) {
+    console.log(x, y, z,a,b,c)
+    return x + y + z+a+b+c;
 }
-const numbers = [1, 2, 3];
+const numbers = [1, 2, 3,4,5,6,7];
 
 console.log(sum0(...numbers));
 // expected output: 6

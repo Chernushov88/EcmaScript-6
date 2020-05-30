@@ -64,7 +64,7 @@ admin.name = 'Pete'; // изменено по ссылке из переменн
 console.log(admin.name); // 'Pete', изменения видны по ссылке из переменной "user"
 */
 //1
-let user0 = {};
+/*let user0 = {};
 user0.name = "John";
 user0.surname = "Smith";
 user0.name = "Pete";
@@ -110,4 +110,4 @@ function multiplyNumeric(obj){
             obj[key] *= 2;
         }
     }
-}
+}*/

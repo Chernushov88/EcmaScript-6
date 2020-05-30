@@ -17,18 +17,18 @@ for (let item of array){
 console.log('<hr>')
 
 
-for (var ite of array){
-    console.log('ite ', ite)
+for (var item of "ABCDEFG"){
+    console.log('item ', item)
 }
 
 /****************************
  * https://learn.javascript.ru/while-for
 ******************************/
 
-// let sum = 0;
-// while (true) {
-//     let value = +prompt("Введите число", '');
-//     if (!value) break; // (*)
-//     sum += value;
-// }
-// alert( 'Сумма: ' + sum );
+let sum = 0;
+while (true) {
+    let value = +prompt("Введите число", '');
+    if (!value) break; // (*)
+    sum += value;
+}
+alert( 'Сумма: ' + sum );

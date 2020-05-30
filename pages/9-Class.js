@@ -74,7 +74,23 @@ d.speak();
 
 
 
+class Animal2 {
+    speak() {
+        return this;
+    }
+    static eat() {
+        return this;
+    } 
+}
 
+let obj = new Animal2();
+console.log(obj.speak());; // Animal {}
+let speak = obj.speak;
+console.log(speak());; // undefined
+
+console.log(Animal2.eat()); // class Animal
+let eat = Animal2.eat;
+console.log(eat());; // undefined
 
 
 

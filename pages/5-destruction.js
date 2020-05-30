@@ -2,10 +2,10 @@ document.title = "5-destruction"
 /*let obj = {
     name: "WFM 3",
     age: 40,
-    color: 'color'
+    color: '#000'
 };
-let {name:n, age: a} = obj;
-console.log(n, a);
+let {name:n, age: a, color:c} = obj;
+console.log('log-1 ', n, a, c);
 
 let array = ["WFM", 40, 'blue'];
 console.log(array);
@@ -22,10 +22,11 @@ console.log(array2);
 let [, , color3="red"] = array2;
 console.log(array2);
 */
+/**/
 /*****************************
  https://learn.javascript.ru/destructuring-assignment
 *****************************/
-let user = {};
+/*let user = {};
 console.log("Ilya Kantor".split(' '));
 console.log(user);
 [user.name, user.surname] = "Ilya Kantor".split(' ');
@@ -51,7 +52,7 @@ user3s.set("age", "30");
 for (let [key, value] of user3s) {
     console.log(`${key}:${value}`); // name:John, then age:30
 }
-
+*/
 
 /*
 let options = {
@@ -88,9 +89,9 @@ showMenu(options);
 /********************************
  Задачи tasks
 ******************************** */
-//Tasks1
+/*//Tasks1
 let userTasks1 = {
-    name: "John",
+    name: "John0",
     years: 30
 };
 let {name, years: age, isAdmin = false} = userTasks1;
@@ -116,3 +117,4 @@ function topSalary(arr){
     return {maxName, max};
 }
 console.log('topSalary', topSalary(salaries));
+*/

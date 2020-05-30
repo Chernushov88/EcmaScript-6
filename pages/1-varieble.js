@@ -6,7 +6,8 @@ document.title = '1-varievle';
 for (var a=0; a<10; a++){
     // console.log(a);
     setTimeout(function() {
-        a = a-1;
+        //a = a - 1;
+        a = --a;
         console.log('setTimeout - ', a);
     }, 1000)
 }

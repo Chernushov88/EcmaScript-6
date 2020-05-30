@@ -1,8 +1,12 @@
 document.title = "13-simbols"
-/*let s = Symbol('WFM')
+/*
+let s = Symbol('WFM')
+console.log(s);
 let s2 = Symbol('1');
 let s3 = Symbol('1');
-console.log(s2 === s3)*/
+console.log(s2 === s3)
+*/
+
 /*
 let s = Symbol('field')
 let s1 = Symbol('field')
@@ -16,6 +20,7 @@ let obj = {
 console.log(Object.getOwnPropertyNames(obj))
 console.log(Object.getOwnPropertySymbols(obj))
 */
+
 /*
 let num = 1
 let str = '2'
@@ -47,7 +52,9 @@ console.log(item.next())
 console.log(item.next())
 console.log(item.next())
 console.log(item.next())
-*/
+
+/**/
+console.log(Symbol.iterator);
 let fib = {
     [Symbol.iterator]() {
         let pre = 0, cur = 1;

@@ -14,9 +14,9 @@ console.log('Oobj5', obj5)
 
 
 
-let findedItem = [1,2,3,4,5,6].find(x => x > 3)
+let findedItem = [1,2,3,4,5,6].find(x => x > 4)
 console.log(findedItem)
-
+console.log(findedItem)
 let str = 'Hello!'
 
 console.log('Repeat: ', str.repeat(3))

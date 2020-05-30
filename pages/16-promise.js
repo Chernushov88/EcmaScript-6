@@ -27,6 +27,8 @@ deley(2000)
     .then(() => {
         console.log('new deley test!')
     })*/
+
+
 import $ from 'jquery'
 let promise = new Promise((resolve, reject) => {
     $.ajax({

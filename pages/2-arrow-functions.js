@@ -9,7 +9,7 @@ console.log(original())
 function original2(){
     return 200;
 }
-// console.log(original2())
+ console.log(original2())
 
 const arrow =(num = 100,num2 = 10)=>{
     return 150 + num*num2;
