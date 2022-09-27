@@ -4,7 +4,7 @@ my_const = 2;
  */
 document.title = '1-varievle';
 for (var a=0; a<10; a++){
-    // console.log(a);
+     console.log(a);
     setTimeout(function() {
         a = a-1;
         console.log('setTimeout - ', a);

@@ -15,14 +15,18 @@ class Car1 {
     }
     logName(){
         console.log(this.name)
+        return this.name
     }
     static staticFunc() {
         console.log('I am static!')
     }
 }
-let car1 = new Car1('BMW')
-// car.logName()
+let car1 = new Car1('Car1 BMW')
+console.log(car1)
+console.log(car1.logName())
 console.log(car1.logName === Car1.prototype.logName)
+console.log(Car1.prototype)
+console.log(car1.__proto__)
 Car1.staticFunc()
 
 

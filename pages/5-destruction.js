@@ -14,18 +14,18 @@ let age = array[1];
 let color = array[2];
 console.log(color);
 let [name2, age2, color2] = array;
-console.log(name);
-console.log(name2);
+console.log(name2, age2, color2);
 
 let array2 = ["WFM", 40];
 console.log(array2);
 let [, , color3="red"] = array2;
+console.log(color3);
 console.log(array2);
 */
 /*****************************
  https://learn.javascript.ru/destructuring-assignment
 *****************************/
-let user = {};
+/*let user = {};
 console.log("Ilya Kantor".split(' '));
 console.log(user);
 [user.name, user.surname] = "Ilya Kantor".split(' ');
@@ -33,8 +33,11 @@ console.log(user);
 console.log(user.name); // Ilya
 //Цикл с .entries()
 let user2 = {
-    name: "John",
-    age: 30
+
+    name: "Serhii",
+    age: 33,
+    name2: "John",
+    age2: 30,
 };
 // цикл по ключам и значениям
 console.log("цикл по ключам и значениям");
@@ -52,6 +55,8 @@ for (let [key, value] of user3s) {
     console.log(`${key}:${value}`); // name:John, then age:30
 }
 
+*/
+
 
 /*
 let options = {
@@ -67,6 +72,7 @@ let {title, ...rest} = options;
 // сейчас title="Menu", rest={height: 200, width: 100}
 alert(rest.height);  // 200
 alert(rest.width);   // 100
+alert(title);   // 100
 */
 /*
 let options = {
@@ -89,6 +95,7 @@ showMenu(options);
  Задачи tasks
 ******************************** */
 //Tasks1
+
 let userTasks1 = {
     name: "John",
     years: 30
@@ -116,3 +123,4 @@ function topSalary(arr){
     return {maxName, max};
 }
 console.log('topSalary', topSalary(salaries));
+/**/

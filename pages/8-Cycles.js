@@ -10,14 +10,14 @@ console.log('-------------------')
 array.forEach(function(item){
     console.log('forEach ',item)
 })
-console.log('<hr>')
+console.log('-------------------')
 for (let item of array){
     console.log('item ', item)
 }
-console.log('<hr>')
+console.log('-------------------')
 
 
-for (var ite of array){
+for (var ite in array){
     console.log('ite ', ite)
 }
 

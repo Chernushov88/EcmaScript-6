@@ -1,10 +1,11 @@
 let path = require('path');
 
 let conf = {
-    // entry: './pages/1-varieble.js',
-    // entry: './pages/2-arrow-functions.js',
-    // entry: './pages/4-object.js',
-   // entry: './pages/4.0-prototype.js',
+     //entry: './pages/1-varieble.js',
+     //entry: './pages/2-arrow-functions.js',
+     //entry: './pages/2-arrow-functions.js',
+    //entry: './pages/4.0-prototype.js',
+     //entry: './pages/4-object.js',
     //entry: './pages/5-destruction.js',
     //entry: './pages/6-RestSpread.js',
     //entry: './pages/7-String.js',

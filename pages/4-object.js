@@ -71,7 +71,7 @@ user0.name = "Pete";
 delete user0.name;
 //2
 function isEmpty(objec){
-    for (proper in objec) {
+    for (let proper in objec) {
         return false
     }
     return true

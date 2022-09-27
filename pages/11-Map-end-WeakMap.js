@@ -23,7 +23,7 @@ let map = new Map([
     ['name', "WFM"],
     ['age', 20]
 ]);
-// console.log(map)
+ console.log(map)
 
 for (let val of map.values()){
     console.log('values: ', val)

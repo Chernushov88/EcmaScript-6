@@ -9,13 +9,13 @@ console.log(original())
 function original2(){
     return 200;
 }
-// console.log(original2())
+ console.log(original2())
 
-const arrow =(num = 100,num2 = 10)=>{
+const arrow =(num = 10,num2 = 2)=>{
     return 150 + num*num2;
 }
 console.log('arrow default',arrow())
-console.log(arrow(50, 4))
+console.log(arrow(50, 40))
 
 const arrow2 = (num,num2) => 150 + num*num2;
 console.log( arrow2(50, 5) )

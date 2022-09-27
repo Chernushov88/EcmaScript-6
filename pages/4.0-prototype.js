@@ -1,5 +1,5 @@
 document.title = '4.0-prototype';
-import 'babel-polyfill';
+//import 'babel-polyfill';
 const person = {
     name: "Segey",
     age: 31,
@@ -7,12 +7,12 @@ const person = {
         console.log('Greet!');
     }
 };
-person
+console.log(person)
 Object.prototype.sayHello = function(){
     console.log('Hello!')
 }
 person.sayHello()
 
-const lena = Object.create(persone);
-lena
+var lena = Object.create(person);
+console.log(lena)
 lena.greet();
